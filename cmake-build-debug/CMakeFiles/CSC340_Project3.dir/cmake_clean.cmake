@@ -1,5 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/CSC340_Project3.dir/Assignment-03_PA_TicTacToe.cpp.o"
+  "CMakeFiles/CSC340_Project3.dir/Assignment-03_PB_CCNumberValidation.cpp.o"
+  "CMakeFiles/CSC340_Project3.dir/Entry.cpp.o"
+  "CMakeFiles/CSC340_Project3.dir/dictionary.cpp.o"
   "CMakeFiles/CSC340_Project3.dir/main.cpp.o"
+  "CMakeFiles/CSC340_Project3.dir/mapVector.cpp.o"
   "CSC340_Project3"
   "CSC340_Project3.pdb"
 )

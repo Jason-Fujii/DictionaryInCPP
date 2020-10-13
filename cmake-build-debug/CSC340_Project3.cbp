@@ -80,7 +80,31 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/jasonfujii/CLionProjects/CSC340_Project3/Assignment-03_PA_TicTacToe.cpp">
+			<Option target="CSC340_Project3"/>
+		</Unit>
+		<Unit filename="/Users/jasonfujii/CLionProjects/CSC340_Project3/Assignment-03_PB_CCNumberValidation.cpp">
+			<Option target="CSC340_Project3"/>
+		</Unit>
+		<Unit filename="/Users/jasonfujii/CLionProjects/CSC340_Project3/Entry.cpp">
+			<Option target="CSC340_Project3"/>
+		</Unit>
+		<Unit filename="/Users/jasonfujii/CLionProjects/CSC340_Project3/Entry.h">
+			<Option target="CSC340_Project3"/>
+		</Unit>
+		<Unit filename="/Users/jasonfujii/CLionProjects/CSC340_Project3/dictionary.cpp">
+			<Option target="CSC340_Project3"/>
+		</Unit>
+		<Unit filename="/Users/jasonfujii/CLionProjects/CSC340_Project3/dictionary.h">
+			<Option target="CSC340_Project3"/>
+		</Unit>
 		<Unit filename="/Users/jasonfujii/CLionProjects/CSC340_Project3/main.cpp">
+			<Option target="CSC340_Project3"/>
+		</Unit>
+		<Unit filename="/Users/jasonfujii/CLionProjects/CSC340_Project3/mapVector.cpp">
+			<Option target="CSC340_Project3"/>
+		</Unit>
+		<Unit filename="/Users/jasonfujii/CLionProjects/CSC340_Project3/mapVector.h">
 			<Option target="CSC340_Project3"/>
 		</Unit>
 		<Unit filename="/Users/jasonfujii/CLionProjects/CSC340_Project3/CMakeLists.txt">

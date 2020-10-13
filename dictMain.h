@@ -7,7 +7,7 @@
 
 
 class dictMain {
-    private 
+    private
 };
 
 

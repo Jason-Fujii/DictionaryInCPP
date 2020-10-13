@@ -6,7 +6,13 @@
 
 #IncludeRegexTransform: 
 
+/Users/jasonfujii/CLionProjects/CSC340_Project3/Entry.h
+iostream
+-
+
 /Users/jasonfujii/CLionProjects/CSC340_Project3/main.cpp
 iostream
 -
+Entry.h
+/Users/jasonfujii/CLionProjects/CSC340_Project3/Entry.h
 

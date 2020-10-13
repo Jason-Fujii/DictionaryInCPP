@@ -123,6 +123,114 @@ CSC340_Project3/fast:
 	$(MAKE) -f CMakeFiles/CSC340_Project3.dir/build.make CMakeFiles/CSC340_Project3.dir/build
 .PHONY : CSC340_Project3/fast
 
+Assignment-03_PA_TicTacToe.o: Assignment-03_PA_TicTacToe.cpp.o
+
+.PHONY : Assignment-03_PA_TicTacToe.o
+
+# target to build an object file
+Assignment-03_PA_TicTacToe.cpp.o:
+	$(MAKE) -f CMakeFiles/CSC340_Project3.dir/build.make CMakeFiles/CSC340_Project3.dir/Assignment-03_PA_TicTacToe.cpp.o
+.PHONY : Assignment-03_PA_TicTacToe.cpp.o
+
+Assignment-03_PA_TicTacToe.i: Assignment-03_PA_TicTacToe.cpp.i
+
+.PHONY : Assignment-03_PA_TicTacToe.i
+
+# target to preprocess a source file
+Assignment-03_PA_TicTacToe.cpp.i:
+	$(MAKE) -f CMakeFiles/CSC340_Project3.dir/build.make CMakeFiles/CSC340_Project3.dir/Assignment-03_PA_TicTacToe.cpp.i
+.PHONY : Assignment-03_PA_TicTacToe.cpp.i
+
+Assignment-03_PA_TicTacToe.s: Assignment-03_PA_TicTacToe.cpp.s
+
+.PHONY : Assignment-03_PA_TicTacToe.s
+
+# target to generate assembly for a file
+Assignment-03_PA_TicTacToe.cpp.s:
+	$(MAKE) -f CMakeFiles/CSC340_Project3.dir/build.make CMakeFiles/CSC340_Project3.dir/Assignment-03_PA_TicTacToe.cpp.s
+.PHONY : Assignment-03_PA_TicTacToe.cpp.s
+
+Assignment-03_PB_CCNumberValidation.o: Assignment-03_PB_CCNumberValidation.cpp.o
+
+.PHONY : Assignment-03_PB_CCNumberValidation.o
+
+# target to build an object file
+Assignment-03_PB_CCNumberValidation.cpp.o:
+	$(MAKE) -f CMakeFiles/CSC340_Project3.dir/build.make CMakeFiles/CSC340_Project3.dir/Assignment-03_PB_CCNumberValidation.cpp.o
+.PHONY : Assignment-03_PB_CCNumberValidation.cpp.o
+
+Assignment-03_PB_CCNumberValidation.i: Assignment-03_PB_CCNumberValidation.cpp.i
+
+.PHONY : Assignment-03_PB_CCNumberValidation.i
+
+# target to preprocess a source file
+Assignment-03_PB_CCNumberValidation.cpp.i:
+	$(MAKE) -f CMakeFiles/CSC340_Project3.dir/build.make CMakeFiles/CSC340_Project3.dir/Assignment-03_PB_CCNumberValidation.cpp.i
+.PHONY : Assignment-03_PB_CCNumberValidation.cpp.i
+
+Assignment-03_PB_CCNumberValidation.s: Assignment-03_PB_CCNumberValidation.cpp.s
+
+.PHONY : Assignment-03_PB_CCNumberValidation.s
+
+# target to generate assembly for a file
+Assignment-03_PB_CCNumberValidation.cpp.s:
+	$(MAKE) -f CMakeFiles/CSC340_Project3.dir/build.make CMakeFiles/CSC340_Project3.dir/Assignment-03_PB_CCNumberValidation.cpp.s
+.PHONY : Assignment-03_PB_CCNumberValidation.cpp.s
+
+Entry.o: Entry.cpp.o
+
+.PHONY : Entry.o
+
+# target to build an object file
+Entry.cpp.o:
+	$(MAKE) -f CMakeFiles/CSC340_Project3.dir/build.make CMakeFiles/CSC340_Project3.dir/Entry.cpp.o
+.PHONY : Entry.cpp.o
+
+Entry.i: Entry.cpp.i
+
+.PHONY : Entry.i
+
+# target to preprocess a source file
+Entry.cpp.i:
+	$(MAKE) -f CMakeFiles/CSC340_Project3.dir/build.make CMakeFiles/CSC340_Project3.dir/Entry.cpp.i
+.PHONY : Entry.cpp.i
+
+Entry.s: Entry.cpp.s
+
+.PHONY : Entry.s
+
+# target to generate assembly for a file
+Entry.cpp.s:
+	$(MAKE) -f CMakeFiles/CSC340_Project3.dir/build.make CMakeFiles/CSC340_Project3.dir/Entry.cpp.s
+.PHONY : Entry.cpp.s
+
+dictionary.o: dictionary.cpp.o
+
+.PHONY : dictionary.o
+
+# target to build an object file
+dictionary.cpp.o:
+	$(MAKE) -f CMakeFiles/CSC340_Project3.dir/build.make CMakeFiles/CSC340_Project3.dir/dictionary.cpp.o
+.PHONY : dictionary.cpp.o
+
+dictionary.i: dictionary.cpp.i
+
+.PHONY : dictionary.i
+
+# target to preprocess a source file
+dictionary.cpp.i:
+	$(MAKE) -f CMakeFiles/CSC340_Project3.dir/build.make CMakeFiles/CSC340_Project3.dir/dictionary.cpp.i
+.PHONY : dictionary.cpp.i
+
+dictionary.s: dictionary.cpp.s
+
+.PHONY : dictionary.s
+
+# target to generate assembly for a file
+dictionary.cpp.s:
+	$(MAKE) -f CMakeFiles/CSC340_Project3.dir/build.make CMakeFiles/CSC340_Project3.dir/dictionary.cpp.s
+.PHONY : dictionary.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -150,6 +258,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/CSC340_Project3.dir/build.make CMakeFiles/CSC340_Project3.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+mapVector.o: mapVector.cpp.o
+
+.PHONY : mapVector.o
+
+# target to build an object file
+mapVector.cpp.o:
+	$(MAKE) -f CMakeFiles/CSC340_Project3.dir/build.make CMakeFiles/CSC340_Project3.dir/mapVector.cpp.o
+.PHONY : mapVector.cpp.o
+
+mapVector.i: mapVector.cpp.i
+
+.PHONY : mapVector.i
+
+# target to preprocess a source file
+mapVector.cpp.i:
+	$(MAKE) -f CMakeFiles/CSC340_Project3.dir/build.make CMakeFiles/CSC340_Project3.dir/mapVector.cpp.i
+.PHONY : mapVector.cpp.i
+
+mapVector.s: mapVector.cpp.s
+
+.PHONY : mapVector.s
+
+# target to generate assembly for a file
+mapVector.cpp.s:
+	$(MAKE) -f CMakeFiles/CSC340_Project3.dir/build.make CMakeFiles/CSC340_Project3.dir/mapVector.cpp.s
+.PHONY : mapVector.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -159,9 +294,24 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... CSC340_Project3"
+	@echo "... Assignment-03_PA_TicTacToe.o"
+	@echo "... Assignment-03_PA_TicTacToe.i"
+	@echo "... Assignment-03_PA_TicTacToe.s"
+	@echo "... Assignment-03_PB_CCNumberValidation.o"
+	@echo "... Assignment-03_PB_CCNumberValidation.i"
+	@echo "... Assignment-03_PB_CCNumberValidation.s"
+	@echo "... Entry.o"
+	@echo "... Entry.i"
+	@echo "... Entry.s"
+	@echo "... dictionary.o"
+	@echo "... dictionary.i"
+	@echo "... dictionary.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... mapVector.o"
+	@echo "... mapVector.i"
+	@echo "... mapVector.s"
 .PHONY : help
 
 
