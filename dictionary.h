@@ -21,26 +21,26 @@ private:
      * returns true if the string is a verified part of speech
      * returns false if the string isn't a part of speech
      */
-    bool checkPOS(string);
+    static bool checkPOS(string);
 
     /*
      * returns true if the string is "distinct"
      * returns false otherwise
      */
-    bool checkDistinct(string);
+    static bool checkDistinct(string);
 
     /*
      * returns true if the string is "reverse"
      * returns false otherwise
      */
-    bool checkReverse(string);
+    static bool checkReverse(string);
 
     /*
      * Takes an int of either 2, 3, or 4 and uses that to know which part of the input is erroneous.
      * The string is the input that the user entered and prints out so they know their exact mistakes
      * The booleans refer to part of speech, distinct, and reverse (respectively) and whether the string is one of them
      */
-    void printErrors(int, string, bool, bool, bool);
+    static void printErrors(int, string, bool, bool, bool);
 
     /*
      * returns true if the user input the same search as their previous search.
@@ -59,10 +59,23 @@ private:
      */
     void printAdmin(string);
 
+    /*
+     * Helps to parse the user's input into readable chunks that the program can use.
+     */
+    static void stringParser(vector<string>&, string&);
+
+    /*
+     * sets the entire string to lowercase
+     */
+    static string setLower(string&);
+
 public:
     //instance variables
     mapVector map;
     //functions
+
+    //Constructor
+    dictionary();
 
     /*
      * The function that facilitates interaction between the dictionary and the user

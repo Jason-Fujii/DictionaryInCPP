@@ -4,6 +4,17 @@
 CMakeFiles/CSC340_Project3.dir/Entry.cpp.o: ../Entry.cpp
 CMakeFiles/CSC340_Project3.dir/Entry.cpp.o: ../Entry.h
 
+CMakeFiles/CSC340_Project3.dir/dictionary.cpp.o: ../Entry.h
+CMakeFiles/CSC340_Project3.dir/dictionary.cpp.o: ../dictionary.cpp
+CMakeFiles/CSC340_Project3.dir/dictionary.cpp.o: ../dictionary.h
+CMakeFiles/CSC340_Project3.dir/dictionary.cpp.o: ../mapVector.h
+
 CMakeFiles/CSC340_Project3.dir/main.cpp.o: ../Entry.h
+CMakeFiles/CSC340_Project3.dir/main.cpp.o: ../dictionary.h
 CMakeFiles/CSC340_Project3.dir/main.cpp.o: ../main.cpp
+CMakeFiles/CSC340_Project3.dir/main.cpp.o: ../mapVector.h
+
+CMakeFiles/CSC340_Project3.dir/mapVector.cpp.o: ../Entry.h
+CMakeFiles/CSC340_Project3.dir/mapVector.cpp.o: ../mapVector.cpp
+CMakeFiles/CSC340_Project3.dir/mapVector.cpp.o: ../mapVector.h
 

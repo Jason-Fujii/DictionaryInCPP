@@ -14,7 +14,7 @@ Entry::Entry()
     def = "To be updated...";
 }
 
-Entry::Entry(string w, string pos, string d)
+Entry::Entry(string &w, string &pos, string &d)
 {
     this->word = w;
     this->partOfSpeech = pos;

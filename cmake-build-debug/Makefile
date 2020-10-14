@@ -123,60 +123,6 @@ CSC340_Project3/fast:
 	$(MAKE) -f CMakeFiles/CSC340_Project3.dir/build.make CMakeFiles/CSC340_Project3.dir/build
 .PHONY : CSC340_Project3/fast
 
-Assignment-03_PA_TicTacToe.o: Assignment-03_PA_TicTacToe.cpp.o
-
-.PHONY : Assignment-03_PA_TicTacToe.o
-
-# target to build an object file
-Assignment-03_PA_TicTacToe.cpp.o:
-	$(MAKE) -f CMakeFiles/CSC340_Project3.dir/build.make CMakeFiles/CSC340_Project3.dir/Assignment-03_PA_TicTacToe.cpp.o
-.PHONY : Assignment-03_PA_TicTacToe.cpp.o
-
-Assignment-03_PA_TicTacToe.i: Assignment-03_PA_TicTacToe.cpp.i
-
-.PHONY : Assignment-03_PA_TicTacToe.i
-
-# target to preprocess a source file
-Assignment-03_PA_TicTacToe.cpp.i:
-	$(MAKE) -f CMakeFiles/CSC340_Project3.dir/build.make CMakeFiles/CSC340_Project3.dir/Assignment-03_PA_TicTacToe.cpp.i
-.PHONY : Assignment-03_PA_TicTacToe.cpp.i
-
-Assignment-03_PA_TicTacToe.s: Assignment-03_PA_TicTacToe.cpp.s
-
-.PHONY : Assignment-03_PA_TicTacToe.s
-
-# target to generate assembly for a file
-Assignment-03_PA_TicTacToe.cpp.s:
-	$(MAKE) -f CMakeFiles/CSC340_Project3.dir/build.make CMakeFiles/CSC340_Project3.dir/Assignment-03_PA_TicTacToe.cpp.s
-.PHONY : Assignment-03_PA_TicTacToe.cpp.s
-
-Assignment-03_PB_CCNumberValidation.o: Assignment-03_PB_CCNumberValidation.cpp.o
-
-.PHONY : Assignment-03_PB_CCNumberValidation.o
-
-# target to build an object file
-Assignment-03_PB_CCNumberValidation.cpp.o:
-	$(MAKE) -f CMakeFiles/CSC340_Project3.dir/build.make CMakeFiles/CSC340_Project3.dir/Assignment-03_PB_CCNumberValidation.cpp.o
-.PHONY : Assignment-03_PB_CCNumberValidation.cpp.o
-
-Assignment-03_PB_CCNumberValidation.i: Assignment-03_PB_CCNumberValidation.cpp.i
-
-.PHONY : Assignment-03_PB_CCNumberValidation.i
-
-# target to preprocess a source file
-Assignment-03_PB_CCNumberValidation.cpp.i:
-	$(MAKE) -f CMakeFiles/CSC340_Project3.dir/build.make CMakeFiles/CSC340_Project3.dir/Assignment-03_PB_CCNumberValidation.cpp.i
-.PHONY : Assignment-03_PB_CCNumberValidation.cpp.i
-
-Assignment-03_PB_CCNumberValidation.s: Assignment-03_PB_CCNumberValidation.cpp.s
-
-.PHONY : Assignment-03_PB_CCNumberValidation.s
-
-# target to generate assembly for a file
-Assignment-03_PB_CCNumberValidation.cpp.s:
-	$(MAKE) -f CMakeFiles/CSC340_Project3.dir/build.make CMakeFiles/CSC340_Project3.dir/Assignment-03_PB_CCNumberValidation.cpp.s
-.PHONY : Assignment-03_PB_CCNumberValidation.cpp.s
-
 Entry.o: Entry.cpp.o
 
 .PHONY : Entry.o
@@ -294,12 +240,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... CSC340_Project3"
-	@echo "... Assignment-03_PA_TicTacToe.o"
-	@echo "... Assignment-03_PA_TicTacToe.i"
-	@echo "... Assignment-03_PA_TicTacToe.s"
-	@echo "... Assignment-03_PB_CCNumberValidation.o"
-	@echo "... Assignment-03_PB_CCNumberValidation.i"
-	@echo "... Assignment-03_PB_CCNumberValidation.s"
 	@echo "... Entry.o"
 	@echo "... Entry.i"
 	@echo "... Entry.s"

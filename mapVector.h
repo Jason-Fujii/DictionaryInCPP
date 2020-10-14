@@ -14,21 +14,22 @@ using namespace std;
 
 class mapVector {
 private:
-    map<string, vector<Entry>> map;
+
+    void wordParse(vector<Entry>&, string&, string&, string&, string&);
 
 public:
     /*
      * Creates a new mapVector object
      */
     mapVector();
-
+    map<string, vector<Entry>> map;
     /*
      * add() takes an Entry object and inserts it into the mapVector.
      * Checks if the word is already in a key in the mapVector
      *      if yes, add the rest of the entry to the mapVector
      *      if no, add the key, then create the vector
      */
-    void add(Entry);
+    void add(Entry&);
 
     /*
      * iterates through a file, turns every element into an Entry obj, then adds that Entry object to the mapVector
@@ -43,7 +44,7 @@ public:
     /*
      * remove(Entry) removes an Entry object from the mapVector
      */
-    void remove(Entry);
+    void remove(Entry&);
 
     /*
      * Search(string) is used when the user only inputs a single word
@@ -64,7 +65,7 @@ public:
      * It searches the table for the chosen key, find the values with the specified part of speech, then applies the
      * distinct and reverse functions if needed.
      */
-    void Search(string, string, bool&, bool&);
+    void Search(string, string, bool, bool);
 
     /*
      * Prints out the entirety of the map in the format:

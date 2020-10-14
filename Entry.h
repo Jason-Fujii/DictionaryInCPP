@@ -15,7 +15,7 @@ private:
 
 public:
     Entry();
-    Entry(string, string, string);
+    Entry(string&, string&, string&);
     string getWord();
     string getPOS();
     string getDef();

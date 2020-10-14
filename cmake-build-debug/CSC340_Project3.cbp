@@ -80,12 +80,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/jasonfujii/CLionProjects/CSC340_Project3/Assignment-03_PA_TicTacToe.cpp">
-			<Option target="CSC340_Project3"/>
-		</Unit>
-		<Unit filename="/Users/jasonfujii/CLionProjects/CSC340_Project3/Assignment-03_PB_CCNumberValidation.cpp">
-			<Option target="CSC340_Project3"/>
-		</Unit>
 		<Unit filename="/Users/jasonfujii/CLionProjects/CSC340_Project3/Entry.cpp">
 			<Option target="CSC340_Project3"/>
 		</Unit>
