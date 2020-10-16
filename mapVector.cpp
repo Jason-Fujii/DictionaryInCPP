@@ -55,7 +55,6 @@ void mapVector::addFile(fstream &file)
     }
 
     file.close();
-    cout << "File closed" << endl;
 }
 
 void mapVector::wordParse(vector<Entry>& list, string& name, string& line, string& pos, string& def)
@@ -177,6 +176,7 @@ void mapVector::printAllKeys()
                 cout << m.second.at(0).getWord() << ", ";
             count++;
         }
+        cout << endl;
     } else
         cout << "\tThe dictionary is empty..." << endl;
 }
@@ -348,14 +348,14 @@ void mapVector::reversePrint(vector<Entry> &list, string pos)
 {
     if(pos.empty())
     {
-        for(int i = list.size(); i >= 0; i--)
+        for(int i = list.size() - 1; i >= 0; i--)
         {
             cout << "\t" << list.at(i).print() << endl;
         }
     } else
     {
         int count = 0;
-        for(int i = list.size(); i >= 0; i--)
+        for(int i = list.size() - 1; i >= 0; i--)
         {
             if(list.at(i).getPOS().compare(pos) == 0)
             {

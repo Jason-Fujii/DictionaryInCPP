@@ -28,230 +28,172 @@ void dictionary::userInterface()
     {
         string input;
         cout << "Search [" << searchNum << "]: ";
-        cin >> input;
+        getline(cin, input);
+//        cin >> input;
+        if(input.empty())
+        {
+            input = "";
+        }
         checkInput(input);
         searchNum++;
     }
 }
 
-void dictionary::checkInput(string &userInput)
-{
-    if(userInput.empty() || userInput == " ")
+void dictionary::checkInput(string &userInput) {
+
+    if (userInput.empty() || userInput == " ")
         printAdmin("");
+    else
+    {
     vector<string> input;
     stringParser(input, userInput);
 
     input.at(0) = setLower(input.at(0));
-    if(input.size() > 4)
-        cout << "\t|\n\t<This dictionary accepts input of up to 4 words.>\n\t<Any words beyond that have been ignored>\n\t|" << endl;
+    if (input.size() > 4)
+        cout << "\t|\n\t<This dictionary accepts input of up to 4 words.>\n\t<Any words beyond that have been ignored>\n\t|"
+                << endl;
 
-    if(input.empty() || input.at(0).at(0) == '!' || input[0].empty())
+    if (input.empty() || input.at(0).at(0) == '!' || input[0].empty())
         printAdmin(input[0]);
-    else if(checkSameInput(input))
+    else if (checkSameInput(input))
         printAdmin("");
-    else
-    {
-        if(input.size() == 1)
-            map.Search(input[0]);
-        else if(input.size() == 2)
+    else {
+        if (input.size() == 1)
         {
+            map.Search(input[0]);
+        }
+
+        else if (input.size() == 2) {
             input[1] = setLower(input[1]);
-            if(checkDistinct(input[1]))
+            if (checkDistinct(input[1]))
                 map.Search(input[0], "", true, false);
-            else if(checkReverse(input[1]))
+            else if (checkReverse(input[1]))
                 map.Search(input[0], "", false, true);
-            else if(checkPOS(input[1]))
+            else if (checkPOS(input[1]))
                 map.Search(input[0], input[1]);
-            else
-            {
+            else {
                 printErrors(2, input[1], checkPOS(input[1]), checkDistinct(input[1]), checkReverse(input[1]));
                 map.Search(input[0]);
             }
-        }
-        else if(input.size() == 3)
-        {
+        } else if (input.size() == 3) {
             input[1] = setLower(input[1]);
             input[2] = setLower(input[2]);
-            if(checkDistinct(input[1]))
-            {
-                if(checkReverse(input[2]))
+            if (checkDistinct(input[1])) {
+                if (checkReverse(input[2]))
                     map.Search(input[0], "", true, true);
-                else
-                {
+                else {
                     printErrors(3, input[2], checkPOS(input[2]), checkDistinct(input[2]), checkReverse(input[2]));
                     map.Search(input[0], "", true, false);
                 }
-            }
-            else if(checkReverse(input[1]))
-            {
+            } else if (checkReverse(input[1])) {
                 cout << "\t|\n\t<'Reverse' should be the last value input>\n\t|" << endl;
                 map.Search(input[0], "", false, true);
-            }
-            else if(checkPOS(input[1]))
-            {
+            } else if (checkPOS(input[1])) {
                 //check if distinct or reverse is in 3
-                if(checkDistinct(input[2]))
+                if (checkDistinct(input[2]))
                     map.Search(input[0], input[1], true, false);
-                else if(checkReverse(input[2]))
+                else if (checkReverse(input[2]))
                     map.Search(input[0], input[1], false, true);
                     //Search(input[0],input[1],"reverse");
-                else
-                {
+                else {
                     printErrors(3, input[2], checkPOS(input[2]), checkDistinct(input[2]), checkReverse(input[2]));
-                    map.Search(input[0],input[1]);
+                    map.Search(input[0], input[1]);
                 }
-            }
-            else
-            {
+            } else {
                 printErrors(2, input[1], checkPOS(input[1]), checkDistinct(input[1]), checkReverse(input[1]));
-                if(checkDistinct(input[2]))
-                {
+                if (checkDistinct(input[2])) {
 
                     map.Search(input[0], "", true, false);
-                }
-                else if(checkReverse(input[2]))
-                {
+                } else if (checkReverse(input[2])) {
                     map.Search(input[0], "", false, true);
-                }
-                else if(checkPOS(input[2]))
-                {
+                } else if (checkPOS(input[2])) {
                     map.Search(input[0], input[2]);
-                }
-                else
-                {
+                } else {
                     printErrors(3, input[2], checkPOS(input[2]), checkDistinct(input[2]), checkReverse(input[2]));
                     map.Search(input[0]);
                 }
             }
-        }
-        else if(input.size() >= 4)
-        {
+        } else if (input.size() >= 4) {
             input[1] = setLower(input[1]);
             input[2] = setLower(input[2]);
             input[3] = setLower(input[3]);
             //check input[1]
             //check if distinct is in 2 or 3
             //check if reverse is in 2, 3, or 4
-            if(checkDistinct(input[1]))
-            {
-                if(checkReverse(input[2]))
-                {
+            if (checkDistinct(input[1])) {
+                if (checkReverse(input[2])) {
                     //Search(input[0], "distinct", "reverse");
-                    cout << "\t<The entered 4th parameter '" <<input[3] <<"' was disregarded.>\n\t|" << endl;
+                    cout << "\t<The entered 4th parameter '" << input[3] << "' was disregarded.>\n\t|" << endl;
                     map.Search(input[0], "", true, true);
-                }
-                else
-                {
+                } else {
                     printErrors(3, input[2], checkPOS(input[2]), checkDistinct(input[2]), checkReverse(input[2]));
-                    if(checkReverse(input[3]))
-                    {
+                    if (checkReverse(input[3])) {
                         map.Search(input[0], "", true, true);
-                    }
-                    else
-                    {
+                    } else {
                         printErrors(4, input[3], checkPOS(input[3]), checkDistinct(input[3]), checkReverse(input[3]));
                         map.Search(input[0], "", true, false);
                     }
                 }
-            }
-            else if(checkReverse(input[1]))
-            {
+            } else if (checkReverse(input[1])) {
                 cout << "\t|\n\t<'Reverse' should be the last qualifier included.>\n\t|" << endl;
                 map.Search(input[0], "", false, true);
-            }
-            else if(checkPOS(input[1]))
-            {
+            } else if (checkPOS(input[1])) {
                 //check if distinct or reverse is in 3
-                if(checkDistinct(input[2]))
-                {
-                    if(checkReverse(input[3]))
+                if (checkDistinct(input[2])) {
+                    if (checkReverse(input[3]))
                         map.Search(input[0], input[1], true, true);
-                    else
-                    {
+                    else {
                         cout << "\t|\n\t<The entered 4th parameter should be 'reverse.'>" << endl;
                         printErrors(4, input[3], checkPOS(input[3]), checkDistinct(input[3]), checkReverse(input[3]));
                         map.Search(input[0], input[1], true, false);
                     }
-                }
-                else if(checkReverse(input[2]))
-                {
+                } else if (checkReverse(input[2])) {
                     //Search(input[0],input[1],"reverse");
                     cout << "\t|\n\t<'Reverse' should be the last command>" << endl;
                     map.Search(input[0], input[1], false, true);
-                }
-                else
-                {
+                } else {
                     printErrors(3, input[2], checkPOS(input[2]), checkDistinct(input[2]), checkReverse(input[2]));
-                    if(checkReverse(input[3]))
-                    {
+                    if (checkReverse(input[3])) {
                         map.Search(input[0], input[1], false, true);
                         //Search(input[0[, input[1], "reverse");
-                    }
-                    else if(checkDistinct(input[3]))
-                    {
+                    } else if (checkDistinct(input[3])) {
                         map.Search(input[0], input[1], true, false);
-                    }
-                    else
-                    {
+                    } else {
                         printErrors(4, input[3], checkPOS(input[3]), checkDistinct(input[3]), checkReverse(input[3]));
-                        map.Search(input[0], input[1],false, false);
+                        map.Search(input[0], input[1], false, false);
                     }
                 }
-            }
-            else
-            {
+            } else {
                 //input[1] is bad
                 printErrors(2, input[1], checkPOS(input[1]), checkDistinct(input[1]), checkReverse(input[1]));
-                if(checkDistinct(input[2]))
-                {
-                    if(checkReverse(input[3]))
-                    {
+                if (checkDistinct(input[2])) {
+                    if (checkReverse(input[3])) {
                         map.Search(input[0], "", true, true);
-                    }
-                    else
-                    {
+                    } else {
                         printErrors(4, input[3], checkPOS(input[3]), checkDistinct(input[3]), checkReverse(input[3]));
                         map.Search(input[0], "", true, false);
                     }
-                }
-                else if(checkReverse(input[2]))
-                {
+                } else if (checkReverse(input[2])) {
                     cout << "\t|\n\t<'Reverse' should be the last command>\n\t|" << endl;
                     map.Search(input[0], "", false, true);
-                }
-                else if(checkPOS(input[2]))
-                {
-                    if(checkDistinct(input[3]))
-                    {
+                } else if (checkPOS(input[2])) {
+                    if (checkDistinct(input[3])) {
                         map.Search(input[0], input[2], true, false);
-                    }
-                    else if(checkReverse(input[3]))
-                    {
+                    } else if (checkReverse(input[3])) {
                         map.Search(input[0], input[2], false, true);
-                    }
-                    else
-                    {
+                    } else {
                         printErrors(4, input[3], checkPOS(input[3]), checkDistinct(input[3]), checkReverse(input[3]));
                         map.Search(input[0], input[2]);
                     }
-                }
-                else
-                {
+                } else {
                     printErrors(3, input[2], checkPOS(input[2]), checkDistinct(input[2]), checkReverse(input[2]));
-                    if(checkDistinct(input[3]))
-                    {
+                    if (checkDistinct(input[3])) {
                         map.Search(input[0], "", true, false);
-                    }
-                    else if(checkReverse(input[3]))
-                    {
+                    } else if (checkReverse(input[3])) {
                         map.Search(input[0], "", false, true);
-                    }
-                    else if(checkPOS(input[3]))
-                    {
+                    } else if (checkPOS(input[3])) {
                         map.Search(input[0], input[3]);
-                    }
-                    else
-                    {
+                    } else {
                         printErrors(4, input[3], checkPOS(input[3]), checkDistinct(input[3]), checkReverse(input[3]));
                         map.Search(input[0]);
                     }
@@ -259,6 +201,7 @@ void dictionary::checkInput(string &userInput)
             }
         }
     }
+}
 }
 
 void dictionary::printAdmin(string input)
@@ -293,13 +236,13 @@ bool dictionary::checkPOS(string str)
 bool dictionary::checkDistinct(string str)
 {
     string s = setLower(str);
-    return s.compare("distinct") == 0;
+    return s == "distinct";
 }
 
 bool dictionary::checkReverse(string str)
 {
     string s = setLower(str);
-    return s.compare("reverse");
+    return s == "reverse";
 }
 
 void dictionary::printErrors(int place, string in, bool pos, bool dist, bool rev)
@@ -350,6 +293,14 @@ bool dictionary::checkSameInput(vector<string> &currInput)
     if(currInput.size() < lastInput.size())
         min = currInput.size();
     else
+    {
+        //current is longer
+        for(int i = 0; i < 4; i++)
+        {
+            lastInput[i] = currInput[i];
+            return false;
+        }
+    }
         min = lastInput.size();
 
     int numSame = 0;
@@ -359,15 +310,19 @@ bool dictionary::checkSameInput(vector<string> &currInput)
             numSame++;
     }
 
-    if(numSame == currInput.size())
+    for(string s: lastInput)
     {
-        lastInput.swap(currInput);
-        return true;
-    } else
-    {
-        lastInput.swap(currInput);
-        return false;
+        s = "";
     }
+    for(int i = 0; i < currInput.size(); i++)
+    {
+        lastInput[i] = currInput[i];
+    }
+
+    if(numSame == currInput.size())
+        return true;
+    else
+        return false;
 }
 
 void dictionary::stringParser(vector<string> &input, string &userInput)
